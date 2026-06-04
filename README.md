@@ -18,8 +18,9 @@ Building end-to-end products with AI-native workflows. Open-source, self-hosted,
 ## Start Here
 
 - 🛠️ **[supercli](https://github.com/javimosch/supercli)** ⭐38 — 4,000+ tools. One CLI. Zero configuration.
-- 💬 **[commiat](https://github.com/javimosch/commiat)** ⭐5 — Tired of writing git commit messages? Let AI do it for you!
+- ⚡ **[tau](https://github.com/javimosch/tau)** — Agent-first AI CLI — non-interactive Zig reimplementation of pi with tool-calling, goal mode, and sessions.
 - 🤝 **[a2a-skill](https://github.com/javimosch/a2a-skill)** ⭐4 — Peer-to-peer agent messaging over a shared SQLite bus. No central chain of command.
+- 💬 **[commiat](https://github.com/javimosch/commiat)** ⭐5 — Tired of writing git commit messages? Let AI do it for you!
 - 🌐 **[remotecmd-cli](https://github.com/javimosch/remotecmd-cli)** ⭐4 — Execute commands on any machine, anywhere.
 - 🎙️ **[dubb-cli](https://github.com/javimosch/dubb-cli)** ⭐4 — Local video dubbing with web UI — faster-whisper + supertonic TTS.
 
@@ -28,6 +29,7 @@ Building end-to-end products with AI-native workflows. Open-source, self-hosted,
 ### AI Agent Infrastructure
 
 - 🛠️ **[supercli](https://github.com/javimosch/supercli)** — 4,000+ bundled CLI tools, one unified interface
+- ⚡ **[tau](https://github.com/javimosch/tau)** — Agent-first AI CLI in Zig — non-interactive with tool-calling, goal mode, and sessions
 - 🤝 **[a2a-skill](https://github.com/javimosch/a2a-skill)** — Peer-to-peer agent coordination via SQLite message bus
 - 🎯 **[goal-mode](https://github.com/javimosch/goal-mode)** — Generic `/goal` command for any agentic CLI (Devin, OpenCode, Pi, …)
 - 🧠 **[sick-memory](https://github.com/javimosch/sick-memory)** — File-based memory system for AI coding agents
