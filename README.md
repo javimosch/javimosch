@@ -21,6 +21,7 @@ Building end-to-end products with AI-native workflows. Open-source, self-hosted,
 ## Start Here
 
 - 🛠️ **[supercli](https://github.com/javimosch/supercli)** ⭐40 — 6,000+ tools. One CLI. Zero configuration.
+- 🧬 **[machin](https://github.com/javimosch/machin)** — Machine-first backend language based on Go: source is base64, one function per line; compiles to native code at C/Rust/Zig speed.
 - 🧠 **[token-reduction-ultimate](https://github.com/javimosch/token-reduction-ultimate)** — Ultimate AI agent skill for token savings: 15 tools, 5 tiers, 60-98% reduction.
 - ⚡ **[tau](https://github.com/javimosch/tau)** — Agent-first AI CLI — non-interactive Zig reimplementation of pi with tool-calling, goal mode, and sessions.
 - 🤝 **[a2a-skill](https://github.com/javimosch/a2a-skill)** ⭐4 — Peer-to-peer agent messaging over a shared SQLite bus. No central chain of command.
