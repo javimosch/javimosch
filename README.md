@@ -28,7 +28,7 @@ Two ways to put an AI agent team to work on your codebase:
 ## Start Here
 
 - 🛠️ **[supercli](https://github.com/javimosch/supercli)** ⭐40 — 6,000+ tools. One CLI. Zero configuration.
-- 🧬 **[machin](https://github.com/javimosch/machin)** — Machine-first backend language based on Go: source is base64, one function per line; compiles to native code at C/Rust/Zig speed.
+- 🧬 **[machin](https://github.com/javimosch/machin)** — Machine-first backend language based on Go: terse plain-text source, one declaration per line; compiles to native code at C/Rust/Zig speed. See the [**awesome-machin**](https://github.com/javimosch/awesome-machin) ecosystem.
 - 🧠 **[token-reduction-ultimate](https://github.com/javimosch/token-reduction-ultimate)** — Ultimate AI agent skill for token savings: 15 tools, 5 tiers, 60-98% reduction.
 - ⚡ **[tau](https://github.com/javimosch/tau)** — Agent-first AI CLI — non-interactive Zig reimplementation of pi with tool-calling, goal mode, and sessions.
 - 🤝 **[a2a-skill](https://github.com/javimosch/a2a-skill)** ⭐4 — Peer-to-peer agent messaging over a shared SQLite bus. No central chain of command.
@@ -88,8 +88,9 @@ Two ways to put an AI agent team to work on your codebase:
 | Nim + Vue 3 | [boilerplate-cli-ui-nim](https://github.com/javimosch/boilerplate-cli-ui-nim) | ~364KB | ~50MB |
 | Zig + Vue 3 | [boilerplate-cli-ui-zig](https://github.com/javimosch/boilerplate-cli-ui-zig) | ~190KB | ~50MB |
 | Dart + Vue 3 | [boilerplate-cli-ui-dart](https://github.com/javimosch/boilerplate-cli-ui-dart) | ~6.4MB | ~400MB |
-|| V + Vue 3 | [boilerplate-cli-ui-v](https://github.com/javimosch/boilerplate-cli-ui-v) | ~1.2MB | ~5MB |
-|| Crystal + Vue 3 | [boilerplate-cli-ui-crystal](https://github.com/javimosch/boilerplate-cli-ui-crystal) | ~3.1MB | ~50MB |
+| V + Vue 3 | [boilerplate-cli-ui-v](https://github.com/javimosch/boilerplate-cli-ui-v) | ~1.2MB | ~5MB |
+| Crystal + Vue 3 | [boilerplate-cli-ui-crystal](https://github.com/javimosch/boilerplate-cli-ui-crystal) | ~3.1MB | ~50MB |
+| **machin + React 18 CDN** | **[boilerplate-cli-ui-machin](https://github.com/javimosch/boilerplate-cli-ui-machin)** | **~27KB** | **~2MB** |
 
 ## GitHub Activity
 
