@@ -18,6 +18,13 @@ Building end-to-end products with AI-native workflows. Open-source, self-hosted,
 ![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
+## 🏢 SaaS — Autonomous Engineering for SMEs
+
+Two ways to put an AI agent team to work on your codebase:
+
+- 🪄 **[mago](https://mago.intrane.fr)** — *the cheap, no-UI way to fleet & loop engineering for SMEs.* An autonomous exec team (CTO, CMO, Head of Product) picks up your GitHub issues and ships them as reviewed pull requests. BYOK · CLI-only · **€20/month**.
+- 🛡️ **[automaintainer](https://automaintainer.intrane.fr)** — *the premium way.* Fully-managed, dashboard-driven autonomous codebase maintenance — set it and forget it.
+
 ## Start Here
 
 - 🛠️ **[supercli](https://github.com/javimosch/supercli)** ⭐40 — 6,000+ tools. One CLI. Zero configuration.
