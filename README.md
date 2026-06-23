@@ -64,6 +64,7 @@ Two ways to put an AI agent team to work on your codebase:
 
 - 🚀 **[superbackend](https://github.com/javimosch/superbackend)** — Node.js middleware with RBAC, logs, metrics, queues, audits
 - 🌐 **[superlandings](https://github.com/javimosch/superlandings)** — Manage and publish multiple landing pages with admin panel & Docker
+- 📊 **[superinsights](https://github.com/javimosch/superinsights)** — Self-hostable web analytics & error tracking (page views, events, performance) with an embeddable SDK
 - 🔥 **[hotify-cli](https://github.com/javimosch/hotify-cli)** — Traefik/Cloudflare app management CLI
 - 📦 **[superbg](https://github.com/javimosch/superbg)** — Super Background Process Manager for Linux
 - 💾 **[minipostiz-cli](https://github.com/javimosch/minipostiz-cli)** — Offline social media scheduler CLI, SQLite-backed
