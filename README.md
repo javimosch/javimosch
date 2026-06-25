@@ -4,75 +4,35 @@
 
 ---
 
-AI is not just a tool.  
-It is becoming infrastructure.
-
-**Infrastructure defines power.**
-
----
-
 ## My stance
 
-I don't treat AI as a feature.  
-I treat it as a **layer of control over execution, data, and decision-making**.
+I treat AI as a **layer of control over execution, data, and decision-making.**
+When intelligence and compute run through GAFAM's APIs, you're building on rented land.
+Dependency is vulnerability.
 
-If you don't control that layer, you don't control the system you build on top of it.
-
----
-
-## Core belief
-
-> Dependency is a form of vulnerability.
-
-When intelligence, compute, and data are externalized entirely to closed systems,  
-control shifts away from builders and users toward platform owners.
-
----
+The concern about AI making us dependent isn't wrong — it's the whole point.
+The difference is I believe the answer is **ownership, not rejection.**
+Self-hosted models. Portable data. Inspectable code.
+A stack under your control is a stack that can't control you.
 
 ## What I build
 
-- AI agent systems (self-hosted, composable, inspectable)
-- Developer tools & CLIs
-- [**machin**](https://github.com/javimosch/machin) — a compiled language for controlled execution
-- SaaS systems designed for ownership and portability
-- Infrastructure that can run without external dependency
-
----
+- Self-hosted AI agent systems
+- Developer CLIs and agent infrastructure
+- **machin** — agent-native compiled language: no type annotations, one function per line, C-speed native binaries
+- SaaS designed for ownership and portability
 
 ## Design principles
 
-- Own your data
-- Own your execution layer
-- Prefer local and self-hosted systems
-- Keep systems inspectable
-- Avoid irreversible lock-in
-- Optimize for long-term control, not short-term convenience
-
----
-
-## The split I care about
-
-| Centralized AI stack | Autonomous stack |
-|---|---|
-| Closed models | Self-hosted systems |
-| API dependency | Replaceable models |
-| External policy control | Observable behavior |
-| Invisible behavior changes | Portable data |
-| Rent-based access | Control stays with the builder |
-
----
+Own your data · Own your execution · Prefer self-hosted · Avoid irreversible lock-in
 
 ## What's shipping now
 
-- 🛠️ **[supercli](https://github.com/javimosch/supercli)** — 10,000+ CLI tools, one agent-friendly interface
-- 🧬 **[machin](https://github.com/javimosch/machin)** — machine-first compiled language, native speed through C
-- ⚡ **[tau](https://github.com/javimosch/tau)** — agent-first AI CLI in Zig (tool-calling, goal mode, sessions)
-- 🤝 **[a2a-skill](https://github.com/javimosch/a2a-skill)** — peer-to-peer agent messaging over a shared SQLite bus
-- 🌐 **[remotecmd-cli](https://github.com/javimosch/remotecmd-cli)** — execute commands on any machine, anywhere. WebSocket relay, token auth, self-hosted
-- 🛡️ **[automaintainer](https://automaintainer.intrane.fr)** — fleet-agent loop engineering for production codebases
-- 🪄 **[mago](https://mago.intrane.fr)** — autonomous exec team over your GitHub repo, €20/month
-
----
+- **supercli** — 10,000+ tools, one agent-friendly CLI
+- **machin** — machine-first compiled language, native speed through C
+- **tau** — agent-first AI CLI in Zig
+- **remotecmd-cli** — execute commands on any machine
+- **AutoMaintainer · mago** — autonomous engineering SaaS
 
 ## Connect
 
