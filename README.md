@@ -30,6 +30,7 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 
 - **supercli** — 10,000+ tools, one agent-friendly CLI
 - **machin** — machine-first compiled language, native speed through C
+- **[machin-terminal](https://github.com/javimosch/machin-terminal)** — a terminal emulator in pure machin (hosts vim/htop/tmux; tmux is the multiplexer)
 - **tau** — agent-first AI CLI in Zig
 - **remotecmd-cli** — execute commands on any machine
 - **AutoMaintainer · mago** — autonomous engineering SaaS
