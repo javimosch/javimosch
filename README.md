@@ -30,6 +30,9 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 
 - **[machin-rag](https://github.com/javimosch/machin-rag)** — [agent-first local RAG](https://javimosch.github.io/machin-rag/): Qdrant + tiny hash embedder, one machin binary, no BYOK — retrieve half for offline agents next to colibri/bossless
 - **[peage](https://github.com/javimosch/peage)** — [fiat pay-per-call for the agent economy](https://peage.intrane.fr): agents hold prepaid wallets, any API charges them with one HTTP call. No crypto, no subscriptions, no OAuth — signed receipts, caller-side spend caps, and a [public solvency proof](https://peage.intrane.fr/v1/solvency) recomputed on every request. The 402 web on rails you own; one ~110 KB machin binary
+- **[relais](https://github.com/javimosch/relais)** — [an inbox your agent can block on](https://relais.intrane.fr): ephemeral/local agents have no public URL, so relais catches any HTTP for them (OAuth callbacks, webhooks, approvals) and offers a `/wait` long-poll they can block on until it arrives. Metered by peage
+- **[portier](https://github.com/javimosch/portier)** — [SSO for your app in one redirect](https://sso.intrane.fr): add Login-with-Google/GitHub/any-OIDC without implementing OAuth. Pay-per-auth via peage (100 free, then 1 EUR/100), no per-seat tax
+- **[machin-idp](https://github.com/javimosch/machin-idp)** — [an OIDC identity provider for the agent era](https://idp.intrane.fr): "Login with intrane" for humans **and** agents, headless login, EdDSA id_tokens in pure MFL (no RSA). Plugs into portier
 - **supercli** — 10,000+ tools, one agent-friendly CLI
 - **machin** — machine-first compiled language, native speed through C
 - **[machin-terminal](https://github.com/javimosch/machin-terminal)** — a terminal emulator in pure machin (hosts vim/htop/tmux; tmux is the multiplexer)
