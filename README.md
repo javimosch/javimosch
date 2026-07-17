@@ -28,6 +28,7 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 
 ## What's shipping now
 
+- **[machin-rag](https://github.com/javimosch/machin-rag)** — [agent-first local RAG](https://javimosch.github.io/machin-rag/): Qdrant + tiny hash embedder, one machin binary, no BYOK — retrieve half for offline agents next to colibri/bossless
 - **[peage](https://github.com/javimosch/peage)** — [fiat pay-per-call for the agent economy](https://peage.intrane.fr): agents hold prepaid wallets, any API charges them with one HTTP call. No crypto, no subscriptions, no OAuth — signed receipts, caller-side spend caps, and a [public solvency proof](https://peage.intrane.fr/v1/solvency) recomputed on every request. The 402 web on rails you own; one ~110 KB machin binary
 - **supercli** — 10,000+ tools, one agent-friendly CLI
 - **machin** — machine-first compiled language, native speed through C
