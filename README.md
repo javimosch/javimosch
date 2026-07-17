@@ -32,7 +32,7 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 - **supercli** — 10,000+ tools, one agent-friendly CLI
 - **machin** — machine-first compiled language, native speed through C
 - **[machin-terminal](https://github.com/javimosch/machin-terminal)** — a terminal emulator in pure machin (hosts vim/htop/tmux; tmux is the multiplexer)
-- **[machin-hart](https://github.com/javimosch/machin-hart)** — [agent-first artifact host](https://hart.intrane.fr): any terminal agent publishes self-contained HTML/JSX and gets a live, versioned, sandboxed URL. One self-hosted binary (CLI + daemon) — Claude Artifacts, unbundled and owned
+- **[machin-hart](https://github.com/javimosch/machin-hart)** — [agent-first artifact host](https://hart.intrane.fr): any terminal agent publishes self-contained HTML/JSX and gets a live, versioned, sandboxed URL — with live-data dashboards, an operator view, and an MCP server for native agent tools. One self-hosted binary (CLI + daemon) — Claude Artifacts, unbundled and owned
 - **[roam](https://github.com/javimosch/roam)** — leave an autonomous agent working on a remote box; it self-replicates over ssh, and you approve its risky moves from anywhere (one static machin binary, no Python on the target)
 - **tau** — agent-first AI CLI in Zig
 - **[remotecmd-cli](https://github.com/javimosch/remotecmd-cli)** — [execute commands on any machine](https://rcmd.intrane.fr): WebSocket relay + token auth, JSON output, fleet health checks. OSS self-hosted or €5/mo managed cloud
