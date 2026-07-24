@@ -36,6 +36,7 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 - **[machin-idp](https://github.com/javimosch/machin-idp)** — [an OIDC identity provider for the agent era](https://idp.intrane.fr): "Login with intrane" for humans **and** agents, headless login, EdDSA id_tokens in pure MFL (no RSA). Plugs into portier
 - **supercli** — 10,000+ tools, one agent-friendly CLI
 - **machin** — machine-first compiled language, native speed through C
+- **[codebase-size](https://github.com/javimosch/codebase-size)** — [measure and classify a codebase by LOC](https://hart.intrane.fr/a/machin-loc/multi-assistant): size class + mass score, self-contained hart reports. One machin binary
 - **[machin-terminal](https://github.com/javimosch/machin-terminal)** — a terminal emulator in pure machin (hosts vim/htop/tmux; tmux is the multiplexer)
 - **[machin-hart](https://github.com/javimosch/machin-hart)** — [agent-first artifact host](https://hart.intrane.fr): any terminal agent publishes self-contained HTML/JSX and gets a live, versioned, sandboxed URL — with live-data dashboards, an operator view, and an MCP server for native agent tools. One self-hosted binary (CLI + daemon) — Claude Artifacts, unbundled and owned
 - **[machin-herald](https://github.com/javimosch/machin-herald)** — [scheduled report mailer](https://javimosch.github.io/machin-herald/): run a command, email its stdout. A pipe, not a framework — the source owns the rendering; no built-in scheduler (systemd timers do that). Delivers via Resend, BYO key. One static machin binary
