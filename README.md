@@ -1,19 +1,25 @@
-# I build systems for autonomy in the age of AI.
+# I build infrastructure for the commons — robust, open-source, built to last.
 
-📍 Savoie, France · Founder @ [Intrane.fr](https://intrane.fr)
+📍 Savoie, France · Founder @ [Intrane.fr](https://intrane.fr) · [SavoieTech.fr](https://savoietech.fr)
 
 ---
 
-## My stance
+## Why
 
-I treat AI as a **layer of control over execution, data, and decision-making.**
-When intelligence and compute run through GAFAM's APIs, you're building on rented land.
-Dependency is vulnerability.
+We live in a world that fluctuates. Rather than chasing maximum performance, I build for robustness — the capacity to stay viable despite what we can't predict.
 
-The concern about AI making us dependent isn't wrong — it's the whole point.
-The difference is I believe the answer is **ownership, not rejection.**
-Self-hosted models. Portable data. Inspectable code.
-A stack under your control is a stack that can't control you.
+The living world doesn't optimize. It relies on diversity, cooperation, redundancy, margins of safety, and adaptation. What seems inefficient short-term is what makes it last. I apply the same logic to infrastructure.
+
+AI is a tool I use — not the goal. The goal is **ownership and autonomy**: self-hosted, portable data, inspectable code. When intelligence and compute run through GAFAM's APIs, you're building on rented land. A stack under your control is a stack that can't control you.
+
+## Values
+
+- **Commons over platforms.** Open-source, not walled gardens.
+- **Cooperation over dependency.** Form several people, not one expert who holds everything.
+- **Diversity over uniformity.** Standard formats, interoperable systems, no lock-in.
+- **Margins over optimization.** Don't exhaust resources chasing speed. Keep room for the unexpected.
+- **Durability over novelty.** A site that lasts 10 years beats one that ships fast and breaks on update.
+- **Territory over cloud.** Local, anchored, serving real people in real places.
 
 ## What I build
 
@@ -24,7 +30,7 @@ A stack under your control is a stack that can't control you.
 
 ## Design principles
 
-Own your data · Own your execution · Prefer self-hosted · Avoid irreversible lock-in
+Own your data · Own your execution · Prefer self-hosted · Avoid irreversible lock-in · Build for durability, not novelty · Serve the commons, not the platform
 
 ## What's shipping now
 
@@ -56,4 +62,4 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 
 ---
 
-> If you don't own the stack, you are part of someone else's system.
+> If you don't own the stack, you are part of someone else's system. If it can't last, it won't liberate anyone.
