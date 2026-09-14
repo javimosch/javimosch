@@ -55,6 +55,8 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 - **[remotecmd-cli](https://github.com/javimosch/remotecmd-cli)** — [execute commands on any machine](https://rcmd.intrane.fr): WebSocket relay + token auth, JSON output, fleet health checks. OSS self-hosted or €5/mo managed cloud
 - **AutoMaintainer · mago** — autonomous engineering SaaS
 
+- **[Crevisto](https://crevisto.com)** — [100+ curated AI image tools](https://crevisto.com/tools): LinkedIn headshots, Ghibli style, logo design, photo restoration, anime avatars, pixel art, and more. Pay-per-use (no subscription, 5 free credits). CLI available: `curl -fsSL https://crevisto.com/install.sh | sh`. BYOK/OpenRouter supported for unlimited use
+
 ## Connect
 
 [![X/Twitter](https://img.shields.io/badge/-javimosch-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/javimosch)
@@ -64,3 +66,4 @@ Own your data · Own your execution · Prefer self-hosted · Avoid irreversible 
 ---
 
 > If you don't own the stack, you are part of someone else's system. If it can't last, it won't liberate anyone.
+
