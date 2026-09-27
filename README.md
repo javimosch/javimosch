@@ -1,6 +1,6 @@
 # I build infrastructure for the commons — robust, open-source, built to last.
 
-📍 Savoie, France · Founder @ [Intrane.fr](https://intrane.fr) · [SavoieTech.fr](https://savoietech.fr)
+📍 Savoie, France · Founder @ [intrane.fr](https://intrane.fr)
 
 ---
 
@@ -15,56 +15,91 @@ AI is a tool I use — not the goal. The goal is **ownership and autonomy**: sel
 ## Values
 
 - **Commons over platforms.** Open-source, not walled gardens.
-- **Cooperation over dependency.** Form several people, not one expert who holds everything.
+- **Cooperation over dependency.** Teach several people rather than be the one expert who holds it all.
 - **Diversity over uniformity.** Standard formats, interoperable systems, no lock-in.
 - **Margins over optimization.** Don't exhaust resources chasing speed. Keep room for the unexpected.
-- **Durability over novelty.** A site that lasts 10 years beats one that ships fast and breaks on update.
+- **Durability over novelty.** A thing that lasts 10 years beats one that ships fast and breaks on update.
 - **Territory over cloud.** Local, anchored, serving real people in real places.
 
-## What I build
+---
 
-- Self-hosted AI agent systems
-- Developer CLIs and agent infrastructure
-- **machin** — agent-native compiled language: no type annotations, one function per line, C-speed native binaries
-- SaaS designed for ownership and portability
+## The map — open source, self-hostable
 
-## Design principles
+The same map as [intrane.fr](https://intrane.fr): everything in this section is public source under an open license (MIT unless noted) and runs on your own machine. Many parts also have a hosted instance you can use today — that is what the link on the name points to.
 
-Own your data · Own your execution · Prefer self-hosted · Avoid irreversible lock-in · Build for durability, not novelty · Serve the commons, not the platform
+### Own your execution
+*The machine runs what you told it to, on hardware you chose.*
 
-## What's shipping now
+- **[machin](https://github.com/javimosch/machin)** — [a machine-first compiled language](https://javimosch.github.io/machin/): as terse as Python for an agent to write, compiles through C to one tiny native binary with HTTP, SQLite and crypto built in. Most of what follows is written in it.
+- **the roam stack** — one story in three MIT binaries: **[roam](https://github.com/javimosch/roam)** ([live](https://roam.intrane.fr): leave an autonomous agent working on a remote box — budgets, sandbox, gated shell, no Python on the target) → **[roam-panel](https://github.com/javimosch/roam-panel)** (approve its risky moves from your phone with one-tap signed links) → **[roam-hub](https://github.com/javimosch/roam-hub)** ([hosted control plane](https://hub.roam.intrane.fr/llms.txt): schedule, meter, bill and report autonomous runs — metered LLM proxy with hard budgets and a kill switch, per-run péage billing, and [GitOps without k8s](https://blog.intrane.fr/gitops-for-people-with-three-vpses))
+- **[remotecmd-cli](https://github.com/javimosch/remotecmd-cli)** — [run a command on any machine you own](https://rcmd.intrane.fr): WebSocket relay, token auth, JSON out, fleet health checks. Self-host free, or €5/mo on the managed relay
+- **[mago](https://github.com/javimosch/mago)** — [cheap autonomous agents that run a company's backlog](https://mago.intrane.fr): an agent team takes your GitHub issues and ships pull requests. Stdlib-only Go, bring your own LLM harness · Apache-2.0
+- **[tau](https://github.com/javimosch/tau)** — agent-first AI CLI in Zig: a non-interactive reimplementation of pi with tool-calling, goal mode and sessions
+- **[machin-terminal](https://github.com/javimosch/machin-terminal)** — a terminal emulator in pure machin (hosts vim/htop/tmux)
 
-- **[greffe](https://github.com/javimosch/greffe)** — [a lightweight blockchain for associations, cooperatives and collectives](https://javimosch.github.io/greffe/) where transparency matters: an append-only, signed, hash-chained record replicated on the machines the group already has, verifiable by anyone from genesis. Proof of authority (the group's own servers seal in round-robin), governance on-chain, **no money, no mining, no empty blocks** — a node idles at ~5 MB. Relays for members behind NAT, a reorg guard so a validator cannot re-seal history, an opt-in public explorer. In production as the [public register](https://enbauges.fr/registre/ui) of a village [matériauthèque](https://enbauges.fr/materiautheque) in the Bauges; one static machin binary
-- **[machin-esetres](https://github.com/javimosch/machin-esetres)** — [self-hosted S3-alternative](https://javimosch.github.io/machin-esetres/): buckets, sha256-deduped objects, an agent-first CLI, and a real AWS SigV4 facade — `aws-cli`/`mc`/`rclone` point straight at it, no code changes, verified against a genuine `aws-cli`. No new machin builtin: pure MFL over existing HMAC/SHA256. One static binary, no MinIO, no Docker
-- **[bkn](https://github.com/javimosch/bkn)** — [a single-binary backend core](https://bkn.intrane.fr/llms.txt): document store, KV with AES-GCM-encrypted values, auth (users/orgs/tokens), files (local or S3 via hand-rolled SigV4), an append-only event log, cron and public signed webhooks — all on embedded SQLite, driven by an agent-first CLI with **no admin UI**. A [PocketBase](https://pocketbase.io) alternative that makes the opposite trade: no dashboard, and a sandboxed JS runtime (goja) as the extension point instead of Go hooks. The proof it is the right size: nine domains of an 85k-line Node/Express/Mongo backend ([superbackend](https://github.com/javimosch/superbackend)) ported onto it as ~1,700 lines of scripts — blog automation, Stripe webhooks, forms, CSV exports, i18n, redirects, feature flags, JSON configs, a headless CMS — with almost nothing leaking back into Go. Content-hash self-update, all six agent-first CLI specs, one static binary
-- **[Agent-First CLI Specs](https://cli-specs.intrane.fr)** — four tiny open specs that make any CLI agent-first: [output contract](https://github.com/javimosch/cli-output-spec) (stdout=data, stderr=context, semantic exit codes, typed errors, help-json), [guide command](https://github.com/javimosch/cli-guide-spec) (embedded mental model), [feedback command](https://github.com/javimosch/cli-feedback-spec) (dual-write relay), [self-update command](https://github.com/javimosch/cli-update-spec) (content-hash, atomic swap). Adopt any subset in 30 minutes. 5 reference implementations (grepapi, mago, automaintainer, remotecmd, chatsnip) — [blog post](https://blog.intrane.fr/agent-first-cli-specs)
-- **[machin-secure](https://github.com/javimosch/machin-secure)** — a KISS, agent-first security auditor: a clean-room, de-scoped take on usestrix/strix (no Docker sandbox, no Playwright, no LLM tool-loop) — just a deterministic regex rule engine emitting JSONL findings. **No LLM client inside the tool at all**: the calling agent reads the findings with its own model and persists its own false-positive triage (`secure verdict <id> keep|drop`); `--hart` prints guidance rather than generating a report, so the agent authors and publishes its own. Verified with a fully non-interactive `devin -p` run end-to-end
-- **[machin-rag](https://github.com/javimosch/machin-rag)** — [agent-first local RAG](https://javimosch.github.io/machin-rag/): Qdrant + tiny hash embedder, one machin binary, no BYOK — retrieve half for offline agents next to colibri/bossless
-- **[peage](https://github.com/javimosch/peage)** — [fiat pay-per-call for the agent economy](https://peage.intrane.fr): agents hold prepaid wallets, any API charges them with one HTTP call. No crypto, no subscriptions, no OAuth — signed receipts, caller-side spend caps, and a [public solvency proof](https://peage.intrane.fr/v1/solvency) recomputed on every request. The 402 web on rails you own; one ~110 KB machin binary
-- **[relais](https://github.com/javimosch/relais)** — [an inbox your agent can block on](https://relais.intrane.fr): ephemeral/local agents have no public URL, so relais catches any HTTP for them (OAuth callbacks, webhooks, approvals) and offers a `/wait` long-poll they can block on until it arrives. Metered by peage
-- **[portier](https://github.com/javimosch/portier)** — [SSO for your app in one redirect](https://portier.intrane.fr): add Login-with-Google/GitHub/any-OIDC without implementing OAuth. Pay-per-auth via peage (100 free, then 1 EUR/100), no per-seat tax
-- **[machin-idp](https://github.com/javimosch/machin-idp)** — [an OIDC identity provider for the agent era](https://idp.intrane.fr): "Login with intrane" for humans **and** agents, headless login, EdDSA id_tokens in pure MFL (no RSA). Plugs into portier
-- **supercli** — 10,000+ tools, one agent-friendly CLI
-- **machin** — machine-first compiled language, native speed through C
-- **[codebase-size](https://github.com/javimosch/codebase-size)** — [measure and classify a codebase by LOC](https://hart.intrane.fr/a/machin-loc/multi-assistant): size class + mass score, self-contained hart reports. One machin binary
-- **[machin-terminal](https://github.com/javimosch/machin-terminal)** — a terminal emulator in pure machin (hosts vim/htop/tmux; tmux is the multiplexer)
-- **[machin-hart](https://github.com/javimosch/machin-hart)** — [agent-first artifact host](https://hart.intrane.fr): any terminal agent publishes self-contained HTML/JSX and gets a live, versioned, sandboxed URL — with live-data dashboards, an operator view, and an MCP server for native agent tools. One self-hosted binary (CLI + daemon) — Claude Artifacts, unbundled and owned
-- **[machin-herald](https://github.com/javimosch/machin-herald)** — [scheduled report mailer](https://javimosch.github.io/machin-herald/): run a command, email its stdout. A pipe, not a framework — the source owns the rendering; no built-in scheduler (systemd timers do that). Delivers via Resend, BYO key. One static machin binary
-- **[machin-feedback](https://github.com/javimosch/machin-feedback)** — [agent-first feedback relay](https://feedback.intrane.fr): one inbox for every app's `feedback` command. Agents POST bugs/ideas/praise (open, rate-limited); you browse it all cross-app. One self-hosted binary
-- **the roam stack** — one story in three MIT binaries: **[roam](https://github.com/javimosch/roam)** (leave an autonomous agent working on a remote box — budgets, sandbox, gated shell, no Python on the target) → **[roam-panel](https://github.com/javimosch/roam-panel)** (approve its risky moves from your phone: park emails with one-tap signed links) → **[roam-hub](https://github.com/javimosch/roam-hub)** ([hosted control plane](https://hub.roam.intrane.fr/llms.txt): schedule, meter, bill & report autonomous runs — metered LLM proxy with hard budgets and a kill switch, webhook triggers, per-run peage billing, and deterministic `kind:script` runs with steps resolved fresh from git — [GitOps without k8s](https://blog.intrane.fr/gitops-for-people-with-three-vpses); the hub [deploys itself](https://blog.intrane.fr/post-a-spec-walk-away-get-a-webhook) through its own pipeline)
-- **tau** — agent-first AI CLI in Zig
-- **[remotecmd-cli](https://github.com/javimosch/remotecmd-cli)** — [execute commands on any machine](https://rcmd.intrane.fr): WebSocket relay + token auth, JSON output, fleet health checks. OSS self-hosted or €5/mo managed cloud
-- **AutoMaintainer · mago** — autonomous engineering SaaS
+### Own your data
+*Your records are a file you can copy, read and carry away.*
 
-- **[Crevisto](https://crevisto.com)** — [100+ curated AI image tools](https://crevisto.com/tools): LinkedIn headshots, Ghibli style, logo design, photo restoration, anime avatars, pixel art, and more. Pay-per-use (no subscription, 5 free credits). CLI available: `curl -fsSL https://crevisto.com/install.sh | sh`. BYOK/OpenRouter supported for unlimited use
+- **[grange](https://github.com/javimosch/grange)** — [a document database built for agents](https://grange.intrane.fr): single binary, crash-safe WAL, O(1) aggregates, cold storage, an export endpoint that gives you everything
+- **[bkn](https://github.com/javimosch/bkn)** — [a backend core in one binary](https://bkn.intrane.fr/llms.txt): document store, encrypted KV, auth, files (local or S3), event log, cron and signed webhooks over embedded SQLite, driven by an agent-first CLI with no admin UI. Nine domains of an 85k-line Node backend (superbackend) ported onto it as ~1,700 lines of scripts
+- **[greffe](https://github.com/javimosch/greffe)** — [an append-only, signed register for associations and cooperatives](https://javimosch.github.io/greffe/): proof of authority on the machines the group already has, governance on-chain, no money, no mining — a node idles at ~5 MB. In production as the [public register](https://enbauges.fr/registre/ui) of a village [matériauthèque](https://enbauges.fr/materiautheque) in the Bauges
+- **[poche](https://github.com/javimosch/poche)** — [an agent-first headless CMS over grange](https://javimosch.github.io/poche/): one machin binary, no UI
+- **[machin-esetres](https://github.com/javimosch/machin-esetres)** — [a self-hosted S3 alternative](https://javimosch.github.io/machin-esetres/) with a real AWS SigV4 facade: `aws-cli`/`mc`/`rclone` point straight at it. One static binary, no MinIO, no Docker
+- **[machin-vault](https://github.com/javimosch/machin-vault)** — backups you can verify and restore without the tool that wrote them
+- **[blurd](https://github.com/javimosch/blurd)** — [face and plate redaction as a self-hosted API](https://blurd.intrane.fr): the original image is never stored, only the redacted bytes · AGPL-3.0
+
+### Own your rails
+*The plumbing an autonomous program needs — payment, identity, an address, a place to publish — without renting it from a platform.*
+
+- **[peage](https://github.com/javimosch/peage)** — [fiat pay-per-call for agents](https://peage.intrane.fr): prepaid wallets, any API charges them with one HTTP call, signed receipts, caller-side spend caps and a [public solvency proof](https://peage.intrane.fr/v1/solvency)
+- **[relais](https://github.com/javimosch/relais)** — [an inbox an agent can block on](https://relais.intrane.fr): catches OAuth callbacks, webhooks and approvals for programs with no public URL, with a `/wait` long-poll
+- **[portier](https://github.com/javimosch/portier)** — [SSO for your app in one redirect](https://portier.intrane.fr): login-with-anything without implementing OAuth, priced per auth rather than per seat
+- **[machin-idp](https://github.com/javimosch/machin-idp)** — [OIDC identity for humans and agents](https://idp.intrane.fr): humans join by invitation, agents are minted over an API and sign in with no browser
+- **[machin-hart](https://github.com/javimosch/machin-hart)** — [agent-first artifact host](https://hart.intrane.fr): any terminal agent publishes self-contained HTML/JSX and gets a live, versioned, sandboxed URL. Claude Artifacts, unbundled and owned
+- **[vigie](https://github.com/javimosch/vigie)** — [cookieless web analytics](https://vigie.intrane.fr) with no dashboard to log into — the numbers come to you as artifacts
+
+### Own your tools
+*Small, sharp, single-purpose. Adoptable in an afternoon and removable in ten minutes.*
+
+- **[Agent-First CLI Specs](https://cli-specs.intrane.fr)** — seven small open specs that make any CLI legible to an agent: [output contract](https://github.com/javimosch/cli-output-spec), [guide](https://github.com/javimosch/cli-guide-spec), [feedback](https://github.com/javimosch/cli-feedback-spec), [self-update](https://github.com/javimosch/cli-update-spec), telemetry, daemon and trial. Each is adoptable on its own — [blog post](https://blog.intrane.fr/agent-first-cli-specs)
+- **[supercli](https://github.com/javimosch/supercli)** — [10,000+ CLI tools, one CLI to reach them](https://javimosch.github.io/supercli/), zero configuration
+- **[a2a-skill](https://github.com/javimosch/a2a-skill)** — [peer-to-peer messaging for agentic CLI sessions](https://javimosch.github.io/a2a-skill/) (claude, opencode, pi, …) over a shared SQLite bus. No central chain of command
+- **[machin-secure](https://github.com/javimosch/machin-secure)** — a deterministic security auditor with no model inside it: it emits JSONL findings, your agent does the judging
+- **[machin-rag](https://github.com/javimosch/machin-rag)** — [local retrieval in one binary](https://javimosch.github.io/machin-rag/): no keys to bring, nothing leaves the machine
+- **[mtlm-router](https://github.com/javimosch/mtlm-router)** — [a 7M-parameter typed decision layer](https://mtlm-router.intrane.fr) in pure machin: routes natural-language requests in ~15ms on CPU, and says "escalate" instead of guessing · Apache-2.0
+- **[bilan](https://github.com/javimosch/bilan)** — [a deterministic ledger and French tax radar](https://bilan.intrane.fr) for people with several activities
+- **[machin-web-ui](https://github.com/javimosch/machin-web-ui)** — a component library and a Tailwind engine with no Node in the build
+- **[machin-herald](https://github.com/javimosch/machin-herald)** — [a scheduled report mailer](https://javimosch.github.io/machin-herald/): run a command, email its stdout. A pipe, not a framework
+- **[machin-feedback](https://github.com/javimosch/machin-feedback)** — an agent-first feedback relay: one inbox for every app's `feedback` command
+- **[codebase-size](https://github.com/javimosch/codebase-size)** — [measure and classify a codebase by LOC](https://hart.intrane.fr/a/machin-loc/multi-assistant), published as self-contained hart reports
+
+### For real places
+*The point of all of it: infrastructure serving people in a particular valley, association or workshop.*
+
+- **[creneau](https://github.com/javimosch/creneau)** — [machine booking for fablabs and makerspaces](https://creneau.intrane.fr): the laser, the CNC, the printers — one board, never double-booked
+- **[matériauthèque](https://enbauges.fr/materiautheque)** — a shared materials library for the Cœur des Bauges, running on a [register](https://enbauges.fr/registre/ui) the commune can audit (built on greffe)
+
+---
+
+## Hosted products — closed source, paid
+
+These are products, not parts of the map: their source is private and they cost money. They are what pays for the open work above.
+
+- **[AutoMaintainer](https://automaintainer.intrane.fr)** — an agent fleet runs a verified build → verify → fix loop on your repos and opens merge-ready PRs, on your own provider keys
+- **[grepapi](https://grepapi.intrane.fr)** — an affordable, agent-first alternative to SerpApi: web search results as JSON from one call or one CLI command
+- **[crmd](https://crmd.intrane.fr)** — the CRM your agent runs
+- **[chatsnip](https://chatsnip.intrane.fr)** — a chatbot for your micro-SaaS landing page, set up in five minutes
+- **[Supergato](https://supergato.eu)** — a white-label AI agent platform: retrieval, tool calling, workflows and embeddable widgets
+- **[La Chatière](https://lachatiere.fr)** — a French agent gateway for Mistral and other models, a white-label assistant for French teams
+- **[crevisto](https://crevisto.com)** — a hundred ready-made AI image tools, paid per use, on the web and from [a command line whose client is MIT](https://github.com/javimosch/crevisto)
+- **[comptoir](https://comptoir.intrane.fr)** — twelve UK and French tax calculators (stamp duty, take-home pay, capital gains, frais de notaire…), each one JSON call away
 
 ## Connect
 
 [![X/Twitter](https://img.shields.io/badge/-javimosch-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/javimosch)
-[![GitHub](https://img.shields.io/badge/-Follow-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/javimosch)
 [![Website](https://img.shields.io/badge/-intrane.fr-22c55e?style=flat-square&logo=google-chrome&logoColor=white)](https://intrane.fr)
+[![Blog](https://img.shields.io/badge/-blog.intrane.fr-3b4550?style=flat-square&logo=rss&logoColor=white)](https://blog.intrane.fr)
 
 ---
 
 > If you don't own the stack, you are part of someone else's system. If it can't last, it won't liberate anyone.
-
