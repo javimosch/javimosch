@@ -93,6 +93,7 @@ These are products, not parts of the map: their source is private and they cost 
 - **[La Chatière](https://lachatiere.fr)** — a French agent gateway for Mistral and other models, a white-label assistant for French teams
 - **[crevisto](https://crevisto.com)** — a hundred ready-made AI image tools, paid per use, on the web and from [a command line whose client is MIT](https://github.com/javimosch/crevisto)
 - **[comptoir](https://comptoir.intrane.fr)** — twelve UK and French tax calculators (stamp duty, take-home pay, capital gains, frais de notaire…), each one JSON call away
+- **[DevCrew](https://devcrew.intrane.fr)** — your AI dev team lives in your chat: five agents that scope, build, review and prove work inside Slack, Teams or Telegram; your code never leaves your infra *(waitlist)*
 
 ## Connect
 
